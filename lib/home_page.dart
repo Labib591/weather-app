@@ -87,7 +87,7 @@ class _HomePageState extends State<HomePage> {
       body:
         Center(
           child: Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
                 gradient: LinearGradient(
                     colors: [Color.fromRGBO(204, 102, 0,40), Color.fromRGBO(128, 128, 255,70)]
                 )
@@ -98,14 +98,14 @@ class _HomePageState extends State<HomePage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Container(
-                  margin: EdgeInsets.all(20),
+                  margin: const EdgeInsets.all(20),
                   decoration: BoxDecoration(
                     color: Colors.grey[50],
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: TextField(
                     controller: searchBox,
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: 20,
                     ),
                     decoration: InputDecoration(
@@ -115,7 +115,7 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 ElevatedButton(
@@ -128,7 +128,7 @@ class _HomePageState extends State<HomePage> {
                 ),
                 Text(
                   _weather?.areaName ?? "",
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 40,
                     fontWeight: FontWeight.bold
                   ),
@@ -136,115 +136,115 @@ class _HomePageState extends State<HomePage> {
                 _imageShower(_weather!.weatherConditionCode!),
                 Text(
                   _weather?.weatherDescription ?.toUpperCase()?? "",
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 30,
                   ),
                 ),
-                SizedBox(height: 8,),
+                const SizedBox(height: 8,),
                 Text("${_weather?.temperature?.celsius?.toStringAsFixed(0)} °C",
-                  style: TextStyle(
+                  style: const TextStyle(
                       fontSize: 40,
                       fontWeight: FontWeight.bold),),
-                Text(DateFormat.EEEE().add_jms().format(DateTime.now()),style: TextStyle(
+                Text(DateFormat.EEEE().add_jms().format(DateTime.now()),style: const TextStyle(
                   fontSize: 20,)),
-                SizedBox(width: 30,),
+                const SizedBox(width: 30,),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Image.asset("assets/11.png",scale: 8,),
-                  SizedBox(width: 5,),
+                  const SizedBox(width: 5,),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text("Sunrise",
+                      const Text("Sunrise",
                       style: TextStyle(
                         fontWeight: FontWeight.w300,
                         fontSize: 25,
                       ),),
-                      SizedBox(width: 5,),
-                      Text(DateFormat().add_jm().format(_weather!.sunrise!),style: TextStyle(fontWeight: FontWeight.bold),),
+                      const SizedBox(width: 5,),
+                      Text(DateFormat().add_jm().format(_weather!.sunrise!),style: const TextStyle(fontWeight: FontWeight.bold),),
                     ],
                   ),
-                  SizedBox(width: 20,),
+                  const SizedBox(width: 20,),
                   Image.asset("assets/12.png",scale: 8,),
-                  SizedBox(width: 5,),
+                  const SizedBox(width: 5,),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text("Sunset",
+                      const Text("Sunset",
                         style: TextStyle(
                           fontWeight: FontWeight.w300,
                           fontSize: 25,
                         ),),
-                      SizedBox(width: 5,),
-                      Text(DateFormat().add_jm().format(_weather!.sunset!),style: TextStyle(fontWeight: FontWeight.bold)),
+                      const SizedBox(width: 5,),
+                      Text(DateFormat().add_jm().format(_weather!.sunset!),style: const TextStyle(fontWeight: FontWeight.bold)),
                     ],
                   ),
                 ],
                 ),
-                Divider(thickness: 2,color: Colors.transparent,),
+                const Divider(thickness: 2,color: Colors.transparent,),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Image.asset("assets/13.png",scale: 8,),
-                    SizedBox(width: 5,),
+                    const SizedBox(width: 5,),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text("Max Temp.",
+                        const Text("Max Temp.",
                           style: TextStyle(
                             fontWeight: FontWeight.w300,
                             fontSize: 25,
                           ),),
-                        Text("${_weather?.tempMax?.celsius?.round()} °C", style: TextStyle(fontWeight: FontWeight.bold),)
+                        Text("${_weather?.tempMax?.celsius?.round()} °C", style: const TextStyle(fontWeight: FontWeight.bold),)
                       ],
                     ),
-                    SizedBox(width: 20,),
+                    const SizedBox(width: 20,),
                     Image.asset("assets/14.png",scale: 8,),
-                    SizedBox(width: 5,),
+                    const SizedBox(width: 5,),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text("Min Temp.",
+                        const Text("Min Temp.",
                           style: TextStyle(
                             fontWeight: FontWeight.w300,
                             fontSize: 25,
                           ),),
-                        Text("${_weather?.tempMin?.celsius?.round()} °C",style: TextStyle(fontWeight: FontWeight.bold)),
+                        Text("${_weather?.tempMin?.celsius?.round()} °C",style: const TextStyle(fontWeight: FontWeight.bold)),
                       ],
                     ),
                   ],
                 ),
-                Divider(thickness: 2,color: Colors.transparent,),
+                const Divider(thickness: 2,color: Colors.transparent,),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Image.asset("assets/humidity.png", scale: 10,),
-                    SizedBox(width: 5,),
+                    const SizedBox(width: 5,),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text("Humidity",
+                        const Text("Humidity",
                           style: TextStyle(
                               fontSize: 25,
                               fontWeight: FontWeight.w300
                           ),),
-                        Text("${_weather?.humidity?.round()}%",style: TextStyle(
+                        Text("${_weather?.humidity?.round()}%",style: const TextStyle(
                             fontWeight: FontWeight.bold
                         ),),
                       ],
                     ),
-                    SizedBox(width: 20,),
+                    const SizedBox(width: 20,),
                     Image.asset("assets/windy.png", scale: 10,),
-                    SizedBox(width: 5,),
+                    const SizedBox(width: 5,),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text("Wind",style: TextStyle(
+                        const Text("Wind",style: TextStyle(
                             fontSize: 25,
                             fontWeight: FontWeight.w300
                         ),),
-                        Text("${_weather?.windSpeed}m/s",style: TextStyle(
+                        Text("${_weather?.windSpeed}m/s",style: const TextStyle(
                             fontWeight: FontWeight.bold
                         ),),
                       ],
